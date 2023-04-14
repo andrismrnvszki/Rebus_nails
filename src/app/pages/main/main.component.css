@@ -8,3 +8,8 @@ div{
 h1{
     font-style: normal;
 }
+.main_component{
+    height: 100vh;
+    margin: 10px;
+    padding: 10px;
+}

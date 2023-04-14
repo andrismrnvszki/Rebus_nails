@@ -11,15 +11,15 @@ export class MenuComponent implements OnInit, AfterViewInit {
   @Output() selectedPage: EventEmitter<string> = new EventEmitter();
 
   constructor() {
-    console.log('constructor called.');
+    //console.log('constructor called.');
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit called.');
+    //console.log('ngOnInit called.');
   }
 
   ngAfterViewInit(): void {
-    console.log('ngAfterViewInit called.');
+    //console.log('ngAfterViewInit called.');
   }
 
   menuSwitch() {

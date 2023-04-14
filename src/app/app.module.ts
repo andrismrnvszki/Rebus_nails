@@ -7,6 +7,7 @@ import { MainComponent } from './pages/main/main.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MenuComponent } from './shared/menu/menu.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
