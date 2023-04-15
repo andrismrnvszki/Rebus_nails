@@ -1,0 +1,22 @@
+.div-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+h1{
+    font-style: normal;
+}
+.main_component{
+    height: 100vh;
+    margin: 10px;
+    padding: 10px;
+    
+}
+form div{
+    padding-top: 5px;
+}
+button{
+    margin: 3px;
+}
