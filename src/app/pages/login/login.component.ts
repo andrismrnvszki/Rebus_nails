@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FakeLoadingService } from '../../shared/services/fake-loading.service';
+import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -15,11 +16,23 @@ export class LoginComponent implements OnInit{
 
   loading:boolean = false;
 
-  constructor(private router: Router, private loadingService: FakeLoadingService){ }
+  constructor(private router: Router, private loadingService: FakeLoadingService, private authService: AuthService){ }
 
   ngOnInit(): void {  }
 
   login(){
+
+    this.authService.login(this.email.value as string, this.password.value as string).then(cred =>{
+        console.log(cred);
+        this.router.navigateByUrl('/main');
+        this.loading=false;
+    }).catch(err => {
+      console.error(err);
+      this.loading=false;
+    })
+
+
+    /*
     this.loading=true;
     //promise
     this.loadingService.loadingWithPromise(this.email.value as string, this.password.value as string).then((_:boolean) => {
@@ -34,7 +47,7 @@ export class LoginComponent implements OnInit{
 
     //async-await
 
-
+    */
   }
 }
 

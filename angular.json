@@ -52,7 +52,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -93,9 +99,19 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Rebus_nails:build:production",
+            "firebaseProject": "rebus-nails",
+            "firebaseHostingSite": "rebus-nails"
+          }
         }
       }
-    } 
+    }
   },
   "cli": {
     "analytics": "465023b7-45ff-4614-a4e8-232410d795a4"

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rebus-nails": {
+      "hosting": {
+        "Rebus_nails": [
+          "rebus-nails"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rebus-nails"
+  }
+}
