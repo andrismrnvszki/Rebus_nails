@@ -7,9 +7,10 @@ div{
 }
 h1{
     font-style: normal;
+    font-size: xx-large;
 }
 .main_component{
     height: 100vh;
     margin: 10px;
     padding: 10px;
-}
+} 

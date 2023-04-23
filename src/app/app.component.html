@@ -1,3 +1,26 @@
-<app-menu  (selectedPage)="changePage($event)" [currentPage]="page"></app-menu>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <app-menu (selectedPage)="changePage($event)" [currentPage]="page" (onCloseSidenav)="onClose($event, sidenav)"></app-menu>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <div fxHide.gt-xs>
+                <button mat-icon-button (click)="onToggleSideNav(sidenav)">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
 
-<router-outlet></router-outlet>
+            <div>Rebus Nails</div>
+            <div fxFlex fxLayout="row" fxLayoutAlign="end" fxHide.xs>
+                <ul fxLayout fxLayoutGap="10px" class="navigation_items">
+                    <li><a routerLink="/main">Main</a></li>
+                    <li><a routerLink="/login">Login</a></li>
+                    <li><a routerLink="/signup">Signup</a></li>
+                    <li><a routerLink="/gallery">Gallery</a></li>
+                    <li><a routerLink="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

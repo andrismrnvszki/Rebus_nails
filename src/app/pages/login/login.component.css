@@ -12,7 +12,24 @@ h1{
     height: 100vh;
     margin: 10px;
     padding: 10px;
+    align-items: center;
+}
+mat-form-field{
+    width: 50%;
+
 }
 span{
-    padding-top: 5px;
+    padding: 5px;
 }
+button{
+    margin: 5px;
+}
+form div{
+    padding: 5px 5px 5px 5px;
+}
+form{
+    display: inline-grid;
+    width: 50%;
+    align-self: center;
+}
+ 
