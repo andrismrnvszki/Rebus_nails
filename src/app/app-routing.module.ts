@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './share/services/auth.guard';
 
 //lazy-loading
 const routes: Routes = [
@@ -21,7 +22,9 @@ const routes: Routes = [
   },
   { 
     path: 'appointments', 
-    loadChildren: () => import('./pages/appointments/appointments.module').then(m => m.AppointmentsModule) },
+    loadChildren: () => import('./pages/appointments/appointments.module').then(m => m.AppointmentsModule),
+    canActivate: [AuthGuard]
+  },
   { 
     path: '', 
     redirectTo: '/main',

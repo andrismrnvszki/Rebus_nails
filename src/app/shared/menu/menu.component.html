@@ -3,11 +3,15 @@
         <mat-icon class="mat-icon">grid_view</mat-icon>
         <span>Main</span>
     </a>
-    <a mat-list-item routerLink="/login" (click)="close()">
+    <a mat-list-item routerLink="/login" (click)="close()" *ngIf="!loggedInUser">
         <mat-icon class="mat-icon">login</mat-icon>
         <span>Login</span>
     </a>
-    <a mat-list-item routerLink="/signup" (click)="close()">
+    <a mat-list-item routerLink="/login" (click)="close(true)" *ngIf="loggedInUser">
+        <mat-icon class="mat-icon">logout</mat-icon>
+        <span>Logout</span>
+    </a>
+    <a mat-list-item routerLink="/signup" (click)="close()" *ngIf="!loggedInUser">
         <mat-icon class="mat-icon">app_registration</mat-icon>
         <span>Signup</span>
     </a>
