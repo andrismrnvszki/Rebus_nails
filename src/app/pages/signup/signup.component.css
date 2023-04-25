@@ -10,13 +10,29 @@ h1{
 }
 .main_component{
     height: 100vh;
-    margin: 10px;
-    padding: 10px;
     
+    padding: 10px;
+    background-image: linear-gradient(to top left, rgba(219, 84, 97,0.5), rgba(255, 228, 237, 1));
+
 }
 form div{
     padding-top: 5px;
 }
 button{
     margin: 3px;
+}
+mat-form-field{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 60%;
+}
+.fucky{
+    width: 100%;
+}
+
+.headerthingy{
+    font-size: xx-large;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-shadow: 0.1px 0.1px;
 }

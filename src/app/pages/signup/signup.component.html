@@ -1,6 +1,6 @@
 <div class="main_component">
     <div class="div-flex">
-        <h1>Register an account!</h1>
+        <h2 class="headerthingy">Register an account!</h2>
         <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
             <mat-form-field>
                 <mat-label for="email">Email: </mat-label>
@@ -22,16 +22,15 @@
                 <mat-label for="phone">Phone number: </mat-label>
                 <input matInput type="tex" formControlName="phone">
             </mat-form-field>
-            
-                <span class="button">
-                    <button mat-raised-button color='primary' (click)="goBack()">Back</button>
-                </span>
-                <span>
-                    <button mat-raised-button color='primary' type="submit">Register</button>
-                </span>
-                
-            
+            <div class="fucky"></div>
+            <span class="button">
+                <button mat-raised-button color='primary' (click)="goBack()">Back</button>
+            </span>
+            <span>
+                <button mat-raised-button color='primary' type="submit">Register</button>
+            </span>
+
+
         </form>
     </div>
 </div>
-

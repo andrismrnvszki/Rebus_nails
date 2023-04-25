@@ -1,3 +1,28 @@
 .demo-inline-calendar-card {
     width: 300px;
   }
+
+  .demo-inline-calendar-card {
+    width: 300px;
+}
+div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+h1{
+  font-style: normal;
+  font-size: xx-large;
+}
+.main_component{
+  height: 100vh;
+  
+  padding: 10px;
+  background-color: rgb(255, 228, 237);
+} 
+mat-form-field{
+  width: 300px;
+  align-self: center;
+}

@@ -4,8 +4,9 @@
     <input matInput [matDatepicker]="picker" [formControl]="date">
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
+    <span>
+      <button mat-raised-button (click)="book()">Book</button>
+    </span>
   </mat-form-field>
-  <span>
-    <button mat-raised-button color="primary" (click)="book()">Book</button>
-  </span>
+  
 </div>
