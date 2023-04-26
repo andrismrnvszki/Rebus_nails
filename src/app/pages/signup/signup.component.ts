@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Location } from '@angular/common';
 import { AuthService } from '../../shared/services/auth.service';
+import { User } from '../../shared/models/User';
 
 @Component({
   selector: 'app-signup',
@@ -28,6 +29,14 @@ export class SignupComponent implements OnInit{
     this.authService.signup(this.signUpForm.get('email')?.value as string,
        this.signUpForm.get('password')?.value as string).then(cred =>{
         console.log(cred)
+        const user: User = {
+          uid: cred.user?.uid as string,
+          email: this.signUpForm.get('email')?.value as string,
+          name: this.signUpForm.get('name')?.value as string,
+          phoneNumber: this.signUpForm.get('phone')?.value as string,
+
+        };
+        //TODO: insert
        }).catch(error =>{
         console.error(error);
        });

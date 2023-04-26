@@ -1,12 +1,15 @@
+
 <div class="main_component">
+  <h2>Choose a date!</h2>
   <mat-form-field appearance="fill" >
     <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker" [formControl]="date">
+    <input  matInput [matDatepicker]="picker" [min]="minDate" [formControl]="date">
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
     <span>
       <button mat-raised-button (click)="book()">Book</button>
     </span>
+    
   </mat-form-field>
   
 </div>
