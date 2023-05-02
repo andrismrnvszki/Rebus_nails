@@ -26,3 +26,15 @@ mat-form-field{
   width: 300px;
   align-self: center;
 }
+.boxybox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 0.1);
+  background-image: linear-gradient(to right, rgba(31, 3, 34,0.5), rgba(255, 228, 237, 1));    
+  margin-top: 30px;
+}

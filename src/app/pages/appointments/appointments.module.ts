@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 
 import { AppointmentsRoutingModule } from './appointments-routing.module';
 
@@ -10,13 +10,15 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DateFormatPipe } from 'src/app/shared/pipe/date-format.pipe'
 
 
 
 
 @NgModule({
   declarations: [
-    AppointmentsComponent
+    AppointmentsComponent,
+    DateFormatPipe
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule,
-  ]
+    MatNativeDateModule
+  ],
+  providers:[DatePipe,DateFormatPipe]
 })
 export class AppointmentsModule { }

@@ -3,13 +3,22 @@
   <h2>Choose a date!</h2>
   <mat-form-field appearance="fill" >
     <mat-label>Choose a date</mat-label>
-    <input  matInput [matDatepicker]="picker" [min]="minDate" [formControl]="date">
+    <input  matInput [matDatepicker]="picker" [formControl]="date">
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
     <span>
       <button mat-raised-button (click)="book()">Book</button>
     </span>
-    
   </mat-form-field>
-  
+  <div *ngIf="appointments.length" class="container">
+    <h2>Your date(s):</h2>
+    <table>
+        <tr *ngFor="let appointment of appointments; let i = index;">
+            <td>{{appointment.date}}</td>
+            <td><button mat-raised-button (click)="modify(appointment)">Modify</button></td>
+            <td><button mat-raised-button (click)="delete(appointment.id)">Delete</button></td>
+        </tr>
+    </table>
+  </div>
 </div>
+
