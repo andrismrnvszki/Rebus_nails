@@ -11,7 +11,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DateFormatPipe } from 'src/app/shared/pipe/date-format.pipe'
-
+import { MatButtonModule } from '@angular/material/button'
 
 
 
@@ -28,7 +28,8 @@ import { DateFormatPipe } from 'src/app/shared/pipe/date-format.pipe'
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatButtonModule
   ],
   providers:[DatePipe,DateFormatPipe]
 })

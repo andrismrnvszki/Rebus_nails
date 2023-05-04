@@ -15,8 +15,8 @@
     <table>
         <tr *ngFor="let appointment of appointments; let i = index;">
             <td>{{appointment.date}}</td>
-            <td><button mat-raised-button (click)="modify(appointment)">Modify</button></td>
-            <td><button mat-raised-button (click)="delete(appointment.id)">Delete</button></td>
+            <td><button mat-stroked-button (click)="modify(appointment)">Modify</button></td>
+            <td><button mat-flat-button (click)="delete(appointment.id)">Delete</button></td>
         </tr>
     </table>
   </div>

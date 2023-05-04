@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Location } from '@angular/common';
 import { AuthService } from '../../shared/services/auth.service';
 import { User } from '../../shared/models/User';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -19,7 +20,7 @@ export class SignupComponent implements OnInit{
     phone: new FormControl('')
   })
 
-  constructor(private location: Location, private authService: AuthService){}
+  constructor(private router: Router,private location: Location, private authService: AuthService){}
 
   ngOnInit(): void {
   }
@@ -36,6 +37,7 @@ export class SignupComponent implements OnInit{
           phoneNumber: this.signUpForm.get('phone')?.value as string,
 
         };
+        this.router.navigateByUrl('/main');
         //TODO: insert
        }).catch(error =>{
         console.error(error);

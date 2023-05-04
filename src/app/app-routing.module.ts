@@ -14,7 +14,8 @@ const routes: Routes = [
   },
   { 
     path: 'contact', 
-    loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule) 
+    loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule),
+    canActivate: [AuthGuard] 
   },
   { 
     path: 'not-found', 
