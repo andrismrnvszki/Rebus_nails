@@ -5,11 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateFormatPipe implements PipeTransform {
 
-  transform(value: number, ...args: unknown[]): string {
-    let tzoffset = (new Date(value)).getTimezoneOffset() * 60000;
-    let minOffSet = new Date(value).getTime() - tzoffset
-    let localISOTime = (new Date(minOffSet)).toISOString().replace('Z', '').replace('T', ' ');
-    return localISOTime;
+  transform(value: string, ...args: unknown[]): string {
+    var splitendo = value as string;
+    var splitted = splitendo?.toString().split(' ');
+    var year = splitted[3];
+    var month = splitted[2];
+    var day = splitted[1];
+    let date = year.concat(' ').concat(day).concat(' ').concat(month);
+    return date;
     // return null;
   }
 
